@@ -112,3 +112,6 @@ class MyAgent(Player):
         """
         # TODO: implement this method
         pass
+
+    def mcts(self):
+        
