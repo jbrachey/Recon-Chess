@@ -165,3 +165,5 @@ class MyAgent(Player):
             if pieceOnBoard.color != square[1].color or pieceOnBoard.piece_type != square[1].piece_type:
                 return False
         return True
+
+
