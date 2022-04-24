@@ -19,8 +19,10 @@ import mcts
 class MyAgent(Player):
 
     def __init__(self):
-        pass
-        
+        self.numParticles = 1000
+        self.particle_filter = self.create_initial_particle_filter(self.numParticles)
+        self.color = None
+
     def handle_game_start(self, color, board):
         """
         This function is called at the start of the game.
@@ -30,8 +32,9 @@ class MyAgent(Player):
         :return:
         """
         # TODO: implement this method
-        pass
-        
+        self.color = color
+        self.particle_filter = self.create_initial_particle_filter(self.numParticles, board)
+
     def handle_opponent_move_result(self, captured_piece, captured_square):
         """
         This function is called at the start of your turn and gives you the chance to update your board.
@@ -54,7 +57,7 @@ class MyAgent(Player):
         """
         # TODO: update this method
         return random.choice(possible_sense)
-        
+
     def handle_sense_result(self, sense_result):
         """
         This is a function called after your picked your 3x3 square to sense and gives you the chance to update your
@@ -71,7 +74,13 @@ class MyAgent(Player):
         """
         # TODO: implement this method
         # Hint: until this method is implemented, any senses you make will be lost.
-        pass
+        newParticleFilter = self.particle_filter.copy()
+        for count in range(len(newParticleFilter)):
+            if not self.board_agrees_with_sense_result(newParticleFilter[count][0], sense_result):
+                newParticle = (newParticleFilter[count][0], 0)
+                newParticleFilter[count] = newParticle
+        weightedParticleFilter = self.reweight(newParticleFilter)
+        self.particle_filter = self.sample_new_particles(weightedParticleFilter)
 
     def choose_move(self, possible_moves, seconds_left):
         """
@@ -79,10 +88,10 @@ class MyAgent(Player):
 
         :param possible_moves: List(chess.Moves) -- list of acceptable moves based only on pieces
         :param seconds_left: float -- seconds left to make a move
-        
+
         :return: chess.Move -- object that includes the square you're moving from to the square you're moving to
         :example: choice = chess.Move(chess.F2, chess.F4)
-        
+
         :condition: If you intend to move a pawn for promotion other than Queen, please specify the promotion parameter
         :example: choice = chess.Move(chess.G7, chess.G8, promotion=chess.KNIGHT) *default is Queen
         """
@@ -90,7 +99,7 @@ class MyAgent(Player):
         
         choice = random.choice(possible_moves)
         return choice
-        
+
     def handle_move_result(self, requested_move, taken_move, reason, captured_piece, captured_square):
         """
         This is a function called at the end of your turn/after your move was made and gives you the chance to update
@@ -104,7 +113,7 @@ class MyAgent(Player):
         """
         # TODO: implement this method
         pass
-        
+
     def handle_game_end(self, winner_color, win_reason):  # possible GameHistory object...
         """
         This function is called at the end of the game to declare a winner.
@@ -115,5 +124,44 @@ class MyAgent(Player):
         # TODO: implement this method
         pass
 
-    
-        
+    def create_initial_particle_filter(self, numParticles, board):
+        particles = []
+        weight = 1 / numParticles
+        for _ in range(numParticles):
+            particle = (board, weight)
+            particles.append(particle)
+        return particles
+
+    def reweight(self, particleFilter):
+        newParticleFilter = []
+        totalWeight = 0
+        for particle in particleFilter:
+            totalWeight += particle[1]
+        for particle in particleFilter:
+            newParticle = (particle[0], particle[1] / totalWeight)
+            newParticleFilter.append(newParticle)
+        return newParticleFilter
+
+    def sample_new_particles(self, particleFilter):
+        newParticleFilter = []
+        particles = []
+        probabilities = []
+        for particle in particleFilter:
+            particles.append(particle[0])
+            probabilities.append(particle[1])
+        newParticles = random.choices(particles, weights=probabilities, k=self.numParticles)
+        for particle in newParticles:
+            weightedParticle = (particle, 1 / self.numParticles)
+            newParticleFilter.append(weightedParticle)
+        return newParticleFilter
+
+    def board_agrees_with_sense_result(self, board, sense_result):
+        for square in sense_result:
+            pieceOnBoard = board.piece_at(chess.parse_square(square[0]))
+            if square[1] is None and pieceOnBoard is None:
+                continue
+            if (square[1] is None and pieceOnBoard is not None) or (square[1] is not None and pieceOnBoard is None):
+                return False
+            if pieceOnBoard.color != square[1].color or pieceOnBoard.piece_type != square[1].piece_type:
+                return False
+        return True
