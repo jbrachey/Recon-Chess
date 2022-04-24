@@ -12,6 +12,7 @@ Source:         Adapted from recon-chess (https://pypi.org/project/reconchess/)
 import random
 import chess
 from player import Player
+import mcts
 
 
 # TODO: Rename this class to what you would like your bot to be named during the game.
@@ -86,6 +87,7 @@ class MyAgent(Player):
         :example: choice = chess.Move(chess.G7, chess.G8, promotion=chess.KNIGHT) *default is Queen
         """
         # TODO: update this method
+        
         choice = random.choice(possible_moves)
         return choice
         
@@ -113,5 +115,5 @@ class MyAgent(Player):
         # TODO: implement this method
         pass
 
-    def mcts(self):
+    
         
