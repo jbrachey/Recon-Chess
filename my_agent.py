@@ -12,6 +12,7 @@ Source:         Adapted from recon-chess (https://pypi.org/project/reconchess/)
 import random
 import chess
 from player import Player
+from ParticleFilter import ParticleFilter
 
 
 # TODO: Rename this class to what you would like your bot to be named during the game.
@@ -19,7 +20,7 @@ class MyAgent(Player):
 
     def __init__(self):
         self.numParticles = 1000
-        self.particle_filter = self.create_initial_particle_filter(self.numParticles)
+        self.particle_filter = ParticleFilter()
         self.color = None
 
     def handle_game_start(self, color, board):
@@ -32,7 +33,6 @@ class MyAgent(Player):
         """
         # TODO: implement this method
         self.color = color
-        self.particle_filter = self.create_initial_particle_filter(self.numParticles, board)
 
     def handle_opponent_move_result(self, captured_piece, captured_square):
         """
@@ -73,13 +73,7 @@ class MyAgent(Player):
         """
         # TODO: implement this method
         # Hint: until this method is implemented, any senses you make will be lost.
-        newParticleFilter = self.particle_filter.copy()
-        for count in range(len(newParticleFilter)):
-            if not self.board_agrees_with_sense_result(newParticleFilter[count][0], sense_result):
-                newParticle = (newParticleFilter[count][0], 0)
-                newParticleFilter[count] = newParticle
-        weightedParticleFilter = self.reweight(newParticleFilter)
-        self.particle_filter = self.sample_new_particles(weightedParticleFilter)
+        self.particle_filter.handle_sense_result(sense_result)
 
     def choose_move(self, possible_moves, seconds_left):
         """
@@ -121,45 +115,3 @@ class MyAgent(Player):
         """
         # TODO: implement this method
         pass
-
-    def create_initial_particle_filter(self, numParticles, board):
-        particles = []
-        weight = 1 / numParticles
-        for _ in range(numParticles):
-            particle = (board, weight)
-            particles.append(particle)
-        return particles
-
-    def reweight(self, particleFilter):
-        newParticleFilter = []
-        totalWeight = 0
-        for particle in particleFilter:
-            totalWeight += particle[1]
-        for particle in particleFilter:
-            newParticle = (particle[0], particle[1] / totalWeight)
-            newParticleFilter.append(newParticle)
-        return newParticleFilter
-
-    def sample_new_particles(self, particleFilter):
-        newParticleFilter = []
-        particles = []
-        probabilities = []
-        for particle in particleFilter:
-            particles.append(particle[0])
-            probabilities.append(particle[1])
-        newParticles = random.choices(particles, weights=probabilities, k=self.numParticles)
-        for particle in newParticles:
-            weightedParticle = (particle, 1 / self.numParticles)
-            newParticleFilter.append(weightedParticle)
-        return newParticleFilter
-
-    def board_agrees_with_sense_result(self, board, sense_result):
-        for square in sense_result:
-            pieceOnBoard = board.piece_at(chess.parse_square(square[0]))
-            if square[1] is None and pieceOnBoard is None:
-                continue
-            if (square[1] is None and pieceOnBoard is not None) or (square[1] is not None and pieceOnBoard is None):
-                return False
-            if pieceOnBoard.color != square[1].color or pieceOnBoard.piece_type != square[1].piece_type:
-                return False
-        return True
