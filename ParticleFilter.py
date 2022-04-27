@@ -14,7 +14,7 @@ class ParticleFilter:
                 newParticle = (newParticleFilter[count][0], 0)
                 newParticleFilter[count] = newParticle
         weightedParticleFilter = reweight(newParticleFilter)
-        self.particles = self.sample_new_particles(weightedParticleFilter)
+        self.particles = sample_new_particles(weightedParticleFilter)
 
 def create_initial_particle_filter(numParticles):
     particles = []
