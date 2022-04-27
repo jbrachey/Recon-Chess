@@ -41,7 +41,10 @@ class MyAgent(Player):
         :param captured_piece: bool - true if your opponents captured your piece with their last move
         :param captured_square: chess.Square - position where your piece was captured
         """
-        pass
+        if captured_piece:
+            self.particle_filter.update_for_piece_captured(captured_square)
+        else:
+            self.particle_filter.update_no_piece_captured()
 
     def choose_sense(self, possible_sense, possible_moves, seconds_left):
         """
