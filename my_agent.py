@@ -107,7 +107,10 @@ class MyAgent(Player):
         :param captured_square: chess.Square - position where you captured the piece
         """
         # TODO: implement this method
-        pass
+        if requested_move == taken_move:
+            self.particle_filter.update_for_requested_move(taken_move, captured_piece)
+        else:
+            self.particle_filter.update_for_unrequested_move(requested_move, taken_move, captured_piece, captured_square)
 
     def handle_game_end(self, winner_color, win_reason):  # possible GameHistory object...
         """

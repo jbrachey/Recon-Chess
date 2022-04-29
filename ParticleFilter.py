@@ -15,7 +15,7 @@ class ParticleFilter:
                 newParticle = (newParticleFilter[count][0], 0)
                 newParticleFilter[count] = newParticle
         weightedParticleFilter = reweight(newParticleFilter)
-        self.particles = sample_new_particles(weightedParticleFilter)
+        self.particles = sample_new_particles(weightedParticleFilter, self.numParticles)
 
     def update_for_piece_captured(self, captured_square):
         particles = []
@@ -83,7 +83,7 @@ class ParticleFilter:
             board = chess.Board()
             part = (board, 0)
             particles.append(part)
-        self.particles = reweight(particles)
+        self.particles = sample_new_particles(reweight(particles), self.numParticles)
 
     def update_no_piece_captured(self):
         particles = []
@@ -108,6 +108,55 @@ class ParticleFilter:
                 newParticle = (board, particle[1])
                 particles.append(newParticle)
         self.particles = particles
+
+    def update_for_requested_move(self, taken_move, captured_piece):
+        particles = []
+        for particle in self.particles:
+            board = particle[0]
+            legal_moves = list(board.legal_moves)
+            # Basically, if the move was valid for this particle, make the move and add the particle with probability
+            if taken_move in legal_moves and (
+                    (captured_piece and board.piece_at(taken_move.to_square) is not None) or (
+                    not captured_piece and board.piece_at(taken_move.to_square) is None)):
+                board.push(taken_move)
+                newParticle = (board, particle[1])
+                particles.append(newParticle)
+            # If the move was valid but not perfect for board, make move and give it probability 1 / prev probability
+            elif taken_move in legal_moves:
+                board.push(taken_move)
+                newParticle = (board, particle[1] / 10)
+                particles.append(newParticle)
+            # If the move was invalid, make a random move and give this particle probability 0 so it won't be sampled
+            else:
+                board.push(list(board.legal_moves)[0])
+                newParticle = (board, 0)
+                particles.append(newParticle)
+        self.particles = sample_new_particles(reweight(particles), self.numParticles)
+
+    def update_for_unrequested_move(self, requested_move, taken_move, captured_piece, captured_square):
+        particles = []
+        for particle in self.particles:
+            board = particle[0]
+            legal_moves = list(board.legal_moves)
+            # Follow similar logic to update_for_requested_move. If board corresponds perfectly with move outcome,
+            # then make the move and add this particle. If the taken_move was possible but the board does not
+            # correspond perfectly, then make the move and add this particle with probability prevProb / 10.
+            # Finally, if taken_move isn't legal in the board, give a prob of 0 so this particle won't be sampled.
+            if requested_move not in legal_moves and taken_move in legal_moves and \
+                    ((captured_piece and board.piece_at(captured_square) is not None) or
+                     (not captured_piece and board.piece_at(captured_square) is None)):
+                board.push(taken_move)
+                newParticle = (board, particle[1])
+                particles.append(newParticle)
+            elif taken_move in legal_moves:
+                board.push(taken_move)
+                newParticle = (board, particle[1] / 10)
+                particles.append(newParticle)
+            else:
+                board.push(list(board.legal_moves)[0])
+                newParticle = (board, 0)
+                particles.append(newParticle)
+        self.particles = sample_new_particles(reweight(particles), self.numParticles)
 
 def create_initial_particle_filter(numParticles):
     particles = []
@@ -139,15 +188,15 @@ def reweight(particleFilter):
         newParticleFilter.append(newParticle)
     return newParticleFilter
 
-def sample_new_particles(self, particleFilter):
+def sample_new_particles(particleFilter, numParticles):
     newParticleFilter = []
     particles = []
     probabilities = []
     for particle in particleFilter:
         particles.append(particle[0])
         probabilities.append(particle[1])
-    newParticles = random.choices(particles, weights=probabilities, k=self.numParticles)
+    newParticles = random.choices(particles, weights=probabilities, k=numParticles)
     for particle in newParticles:
-        weightedParticle = (particle, 1 / self.numParticles)
+        weightedParticle = (particle, 1 / numParticles)
         newParticleFilter.append(weightedParticle)
     return newParticleFilter
