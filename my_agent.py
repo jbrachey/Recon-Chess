@@ -22,6 +22,7 @@ class MyAgent(Player):
     def __init__(self):
         self.numParticles = 1000
         self.particle_filter = ParticleFilter()
+        self.board = []
         self.color = None
 
     def handle_game_start(self, color, board):
@@ -93,7 +94,10 @@ class MyAgent(Player):
         :example: choice = chess.Move(chess.G7, chess.G8, promotion=chess.KNIGHT) *default is Queen
         """
         # TODO: update this method
-        
+
+        monte_carlo_tree_search = mcts.MCTSNode(state= )
+
+
         choice = random.choice(possible_moves)
         return choice
 
@@ -122,6 +126,8 @@ class MyAgent(Player):
         :param win_reason: String -- the reason for the game ending
         """
         # TODO: implement this method
+
+
         pass
 
     def create_initial_particle_filter(self, numParticles, board):
