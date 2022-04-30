@@ -12,6 +12,7 @@ Source:         Adapted from recon-chess (https://pypi.org/project/reconchess/)
 import random
 import chess
 from player import Player
+from ParticleFilter import ParticleFilter
 import mcts
 
 
@@ -20,7 +21,7 @@ class MyAgent(Player):
 
     def __init__(self):
         self.numParticles = 1000
-        self.particle_filter = self.create_initial_particle_filter(self.numParticles)
+        self.particle_filter = ParticleFilter()
         self.color = None
 
     def handle_game_start(self, color, board):
@@ -33,7 +34,6 @@ class MyAgent(Player):
         """
         # TODO: implement this method
         self.color = color
-        self.particle_filter = self.create_initial_particle_filter(self.numParticles, board)
 
     def handle_opponent_move_result(self, captured_piece, captured_square):
         """
@@ -42,7 +42,10 @@ class MyAgent(Player):
         :param captured_piece: bool - true if your opponents captured your piece with their last move
         :param captured_square: chess.Square - position where your piece was captured
         """
-        pass
+        if captured_piece:
+            self.particle_filter.update_for_piece_captured(captured_square)
+        else:
+            self.particle_filter.update_no_piece_captured()
 
     def choose_sense(self, possible_sense, possible_moves, seconds_left):
         """
@@ -74,13 +77,7 @@ class MyAgent(Player):
         """
         # TODO: implement this method
         # Hint: until this method is implemented, any senses you make will be lost.
-        newParticleFilter = self.particle_filter.copy()
-        for count in range(len(newParticleFilter)):
-            if not self.board_agrees_with_sense_result(newParticleFilter[count][0], sense_result):
-                newParticle = (newParticleFilter[count][0], 0)
-                newParticleFilter[count] = newParticle
-        weightedParticleFilter = self.reweight(newParticleFilter)
-        self.particle_filter = self.sample_new_particles(weightedParticleFilter)
+        self.particle_filter.handle_sense_result(sense_result)
 
     def choose_move(self, possible_moves, seconds_left):
         """
@@ -112,7 +109,10 @@ class MyAgent(Player):
         :param captured_square: chess.Square - position where you captured the piece
         """
         # TODO: implement this method
-        pass
+        if requested_move == taken_move:
+            self.particle_filter.update_for_requested_move(taken_move, captured_piece)
+        else:
+            self.particle_filter.update_for_unrequested_move(requested_move, taken_move, captured_piece, captured_square)
 
     def handle_game_end(self, winner_color, win_reason):  # possible GameHistory object...
         """
@@ -165,5 +165,4 @@ class MyAgent(Player):
             if pieceOnBoard.color != square[1].color or pieceOnBoard.piece_type != square[1].piece_type:
                 return False
         return True
-
 
