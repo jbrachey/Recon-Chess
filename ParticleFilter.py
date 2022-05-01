@@ -1,6 +1,7 @@
 import chess
 import random
 import numpy as np
+from normal_chess_engine_files import chess_engine
 
 
 class ParticleFilter:
@@ -101,13 +102,36 @@ class ParticleFilter:
                 # Update this board for one of the best moves, randomly sampled
                 # For now, will again just randomly sample out of possible moves
                 board = particle[0]
+                white = particle[2]
                 # Will this automatically return moves for black since it's black's turn?
                 # Or will it return moves for white? Need to check this.
+                #_, table_of_moves, __ = chess_engine.minimax(board=board, depth=3, isMaximizing=white)
+                #legal_moves, weights = self.conv_map_of_moves_to_list(table_of_moves)
                 legal_moves = list(board.legal_moves)
                 board.push(random.choice(legal_moves))
+                #board.push(random.choice(legal_moves, weights=weights, k=1))
                 newParticle = (board, particle[1])
                 particles.append(newParticle)
         self.particles = particles
+
+    def conv_map_of_moves_to_list(self, table_of_moves):
+        moves = []
+        weights = []
+        total_weight = 0
+        min_weight = 0
+        for key in table_of_moves.keys():
+            move = table_of_moves[key][0]
+            weight = table_of_moves[key][1]
+            moves.append(move)
+            weights.append(weight)
+            #shiting all the weights to start at 0 so we can easily scale them for weighting the diff moves
+            if weight < min_weight:
+                total_weight += (min_weight - weight) * len(weights)
+            else:
+                total_weight += weight - min_weight #min weight will be negative so this adds
+        for i, weight in enumerate(weights):
+            weights[i] = weight/ total_weight
+        return moves, weights
 
     def update_for_requested_move(self, taken_move, captured_piece):
         particles = []
@@ -158,12 +182,12 @@ class ParticleFilter:
                 particles.append(newParticle)
         self.particles = sample_new_particles(reweight(particles), self.numParticles)
 
-def create_initial_particle_filter(numParticles):
+def create_initial_particle_filter(numParticles, color_white):
     particles = []
     weight = 1 / numParticles
     board = chess.Board()
     for _ in range(numParticles):
-        particle = (board, weight)
+        particle = (board, weight, color_white)
         particles.append(particle)
     return particles
 
@@ -200,3 +224,8 @@ def sample_new_particles(particleFilter, numParticles):
         weightedParticle = (particle, 1 / numParticles)
         newParticleFilter.append(weightedParticle)
     return newParticleFilter
+
+def get_most_probable_board_states(self):
+    self.particles.sort(key=lambda k: k[1])
+
+    return self.particles

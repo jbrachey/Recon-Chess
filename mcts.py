@@ -170,6 +170,7 @@ class TestMCTS:
             print("pre-board")
             print(board)
             mcts = MCTSNode(state=board, black=black_move, agent_turn=agent_turn)
+            #might want best action to return the value of the move too
             move = mcts.best_action()
             board.push(move)
             print("post-board")

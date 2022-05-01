@@ -22,8 +22,8 @@ class MyAgent(Player):
     def __init__(self):
         self.numParticles = 1000
         self.particle_filter = ParticleFilter()
-        self.board = []
-        self.color = None
+        self.board = None
+        self.white = None
 
     def handle_game_start(self, color, board):
         """
@@ -34,7 +34,8 @@ class MyAgent(Player):
         :return:
         """
         # TODO: implement this method
-        self.color = color
+        self.white = color
+        self.board = board
 
     def handle_opponent_move_result(self, captured_piece, captured_square):
         """
@@ -60,6 +61,10 @@ class MyAgent(Player):
         :example: choice = chess.A1
         """
         # TODO: update this method
+        #ideas we could minimize entropy. Take our possible board states and
+        #we can use possible_moves to decrease our possible boards
+
+
         return random.choice(possible_sense)
 
     def handle_sense_result(self, sense_result):
@@ -94,12 +99,21 @@ class MyAgent(Player):
         :example: choice = chess.Move(chess.G7, chess.G8, promotion=chess.KNIGHT) *default is Queen
         """
         # TODO: update this method
+        #update this so we are sampling more states and taking the weighted best move
+        guess_state = self.sample_states()
+        monte_carlo_tree_search = mcts.MCTSNode(state=guess_state, black= not guess_state.turn, agent_turn=guess_state.turn == self.white)
 
-        monte_carlo_tree_search = mcts.MCTSNode(state= )
+        move = monte_carlo_tree_search.best_action()
+        return move
 
-
-        choice = random.choice(possible_moves)
-        return choice
+    def sample_states(self):
+        states = self.particle_filter.get_most_probable_board_states()
+        boards = []
+        weights = []
+        for state in states:
+            boards.append(state[0])
+            weights.append(state[1])
+        return random.choice(boards, weights=weights, k=1)
 
     def handle_move_result(self, requested_move, taken_move, reason, captured_piece, captured_square):
         """
