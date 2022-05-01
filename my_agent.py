@@ -63,9 +63,26 @@ class MyAgent(Player):
         # TODO: update this method
         #ideas we could minimize entropy. Take our possible board states and
         #we can use possible_moves to decrease our possible boards
+        board_states = self.particle_filter.get_most_probable_board_states()
+        probability = 0
+        differences = {}
+        max_square = None
+        for square in possible_sense:
+            differences[square] = set()
+            for board in board_states:
+                #arbitrary constant to say we have sampled enough boards
+                #goal is to minimize entropy aka eliminate as many board possibilities as possible
+                if probability > 500:
+                    break
+                probability += board[1]
+                if board[0].piece_at(square) not in differences[square]:
+                    differences[square].add(board[0].piece_at(square))
+        best_square = (None, -1)
+        for key in differences.keys():
+            if best_square[1] < len(differences[key]):
+                best_square = (key, len(differences[key]))
 
-
-        return random.choice(possible_sense)
+        return best_square[0]
 
     def handle_sense_result(self, sense_result):
         """

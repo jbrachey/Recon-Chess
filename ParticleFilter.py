@@ -2,6 +2,7 @@ import chess
 import random
 import numpy as np
 from normal_chess_engine_files import chess_engine
+#import chess_engine
 
 
 class ParticleFilter:
@@ -102,7 +103,7 @@ class ParticleFilter:
                 # Update this board for one of the best moves, randomly sampled
                 # For now, will again just randomly sample out of possible moves
                 board = particle[0]
-                white = particle[2]
+                #white = particle[2]
                 # Will this automatically return moves for black since it's black's turn?
                 # Or will it return moves for white? Need to check this.
                 #_, table_of_moves, __ = chess_engine.minimax(board=board, depth=3, isMaximizing=white)
@@ -182,18 +183,29 @@ class ParticleFilter:
                 particles.append(newParticle)
         self.particles = sample_new_particles(reweight(particles), self.numParticles)
 
-def create_initial_particle_filter(numParticles, color_white):
+    def get_most_probable_board_states(self):
+        self.particles.sort(key=lambda k: k[1], reverse=True)
+        # print(self.particles)
+        return self.particles
+
+def create_initial_particle_filter(numParticles):
     particles = []
     weight = 1 / numParticles
     board = chess.Board()
     for _ in range(numParticles):
-        particle = (board, weight, color_white)
+        particle = (board, weight)
         particles.append(particle)
     return particles
 
 def board_agrees_with_sense_result(board, sense_result):
+    print(sense_result)
     for square in sense_result:
-        pieceOnBoard = board.piece_at(chess.parse_square(square[0]))
+        try:
+            pieceOnBoard = board.piece_at(chess.parse_square(square[0]))
+        except:
+            print("square:", square)
+            print(chess.parse_square(square[0]))
+            #print(square)
         if square[1] is None and pieceOnBoard is None:
             continue
         if (square[1] is None and pieceOnBoard is not None) or (square[1] is not None and pieceOnBoard is None):
@@ -224,8 +236,3 @@ def sample_new_particles(particleFilter, numParticles):
         weightedParticle = (particle, 1 / numParticles)
         newParticleFilter.append(weightedParticle)
     return newParticleFilter
-
-def get_most_probable_board_states(self):
-    self.particles.sort(key=lambda k: k[1])
-
-    return self.particles

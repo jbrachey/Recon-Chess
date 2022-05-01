@@ -2,8 +2,8 @@ import chess.pgn
 import chess
 import math
 import numpy as np
-#from normal_chess_engine_files import ChessCNN
-from ChessCNN import ChessCNN
+from normal_chess_engine_files import ChessCNN
+#from ChessCNN import ChessCNN
 import torch
 
 # import sys
@@ -215,7 +215,8 @@ def parse_board(board):
 
 def nn_eval(board):
     nn_model = ChessCNN()
-    model_state_dict = torch.load("model_params/model_params.pt", map_location=torch.device('cpu'))
+    model_state_dict = torch.load("model_params.pt")
+    #model_state_dict = torch.load("model_params/model_params.pt", map_location=torch.device('cpu'))
     nn_model.load_state_dict(model_state_dict["model_state_dict"])
     input = parse_board(board)
     input = np.asarray([input]) # this solves my issue of feedforward?!!!!!!!
@@ -407,9 +408,9 @@ pos = chess.Board(fen = "rn2kb1r/pp1b2pp/5n2/q3ppB1/NP1p4/2PP1N2/P4PPP/2RQKB1R b
 # print(pos.is_capture(move))
 
 move, val, table = minimax(board = pos, depth = 3, isMaximizing = False)
-print("move: ", move)
-print("table: ", table)
-print("val: ", val)
+#print("move: ", move)
+#print("table: ", table)
+#print("val: ", val)
 
 
 # NOTE ~~~~~~~~~~~~~~~~~~~~~~
