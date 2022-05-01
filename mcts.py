@@ -79,7 +79,12 @@ class MCTSNode():
             if self.agent_turn:
                 new_board.push(self.agent_move(new_board))
             else:
-                new_board.push(self.opponent_move(new_board))
+                move = self.opponent_move(new_board)
+                try:
+                    new_board.push(move)
+                except AttributeError:
+                    print('MOVE DIDNT WORK IN ROLLOUT: ', move)
+                    new_board.turn = not new_board.turn
             self.agent_turn = not self.agent_turn
         if new_board.is_stalemate():
             return 0
@@ -119,12 +124,13 @@ class MCTSNode():
 
     def opponent_move(self, board):
         if not self.is_terminal(board):
-            move, val, table = chess_engine.minimax(board=board, depth=2, isMaximizing= self.black)
+            move, val, table = chess_engine.minimax(board=board, depth=1, isMaximizing= self.black)
             #move = random.choice(list(board.legal_moves))
         return move
     def agent_move(self, board):
         if not self.is_terminal(board):
-            move, val, table = chess_engine.minimax(board=board, depth=2, isMaximizing= not self.black)
+            move, val, table = chess_engine.minimax(board=board, depth=1, isMaximizing= not self.black)
+            #print('table in mcts: ', table)
             #print(table)
             #move = random.choice(list(board.legal_moves))
         return move
