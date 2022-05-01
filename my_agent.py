@@ -21,7 +21,6 @@ from normal_chess_engine_files import chess_engine
 class MyAgent(Player):
 
     def __init__(self):
-        self.numParticles = 1000
         self.particle_filter = ParticleFilter()
         self.board = None
         self.white = None
@@ -70,6 +69,7 @@ class MyAgent(Player):
         # TODO: update this method
         #ideas we could minimize entropy. Take our possible board states and
         #we can use possible_moves to decrease our possible boards
+        """
         board_states = self.particle_filter.get_most_probable_board_states()
         probability = 0
         differences = {}
@@ -99,6 +99,8 @@ class MyAgent(Player):
         if best % 7 == 0:
             best -= 1
         return best
+        """
+        return self.particle_filter.get_best_square()
 
     def handle_sense_result(self, sense_result):
         """
@@ -135,17 +137,19 @@ class MyAgent(Player):
         #update this so we are sampling more states and taking the weighted best move
         #guess_state = self.sample_states()[0]
         guess_state = self.particle_filter.get_most_probable_board_states()[0][0]
-        print('guess_state: ')
-        print(guess_state)
-        #move, val, table = chess_engine.minimax(board=guess_state, depth=2, isMaximizing=self.white)
+        if guess_state.turn != self.white:
+            guess_state.turn = self.white
+        #print('guess_state: ')
+        #print(guess_state)
+        move, val, table = chess_engine.minimax(board=guess_state, depth=2, isMaximizing=self.white)
         #print('table: ', table)
         #print('move: ', move)
         #print('val: ', val)
         #print('table: ', table)
 
-        monte_carlo_tree_search = mcts.MCTSNode(state=guess_state, black=(not guess_state.turn), agent_turn=guess_state.turn == self.white)
+        #monte_carlo_tree_search = mcts.MCTSNode(state=guess_state, black=(not guess_state.turn), agent_turn=guess_state.turn == self.white)
 
-        move = monte_carlo_tree_search.best_action()
+        #move = monte_carlo_tree_search.best_action()
         print("best move picked! ", move)
         return move
 
