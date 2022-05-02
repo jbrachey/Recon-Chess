@@ -1,0 +1,41 @@
+Starting Game between MyAgent-WHITE and Random-BLACK
+##################################--WHITE's Turn [1]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('b1c3'), -46.25, {0: (Move.from_uci('b1c3'), -46.25), 1: (Move.from_uci('d2d4'), -86.25), 2: (Move.from_uci('d2d4'), -86.25), 3: (Move.from_uci('d2d3'), -46.25), 4: (Move.from_uci('d2d3'), -46.25), 5: (Move.from_uci('g1f3'), -61.25), 6: (Move.from_uci('b1a3'), -76.25), 7: (Move.from_uci('c2c4'), -76.25), 8: (Move.from_uci('c2c4'), -76.25), 9: (Move.from_uci('c2c4'), -76.25), 10: (Move.from_uci('c2c4'), -76.25), 11: (Move.from_uci('a2a4'), -81.25), 12: (Move.from_uci('a2a4'), -81.25), 13: (Move.from_uci('a2a4'), -81.25), 14: (Move.from_uci('b2b4'), -86.25), 15: (Move.from_uci('b2b4'), -86.25), 16: (Move.from_uci('b2b4'), -86.25), 17: (Move.from_uci('b2b4'), -86.25), 18: (Move.from_uci('f2f3'), -96.25), 19: (Move.from_uci('f2f3'), -96.25)}) -- Move taken: None
+
+##################################--BLACK's Turn [2]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: e7e6 -- Move taken: e7e6
+
+##################################--WHITE's Turn [3]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p |   | p | p | p |
+6|   |   |   |   | p |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
