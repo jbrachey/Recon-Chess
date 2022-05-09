@@ -1,6 +1,8 @@
 # Recon-Chess
 CS4649 Recon Blind Multi-Chess course project
 
+Latest code used for competition is in the finaley directory
+
 ### jbrachey3_jdill33_hghori6_chess_engine.py
 
 This file handles everything pertaining to determining the best move to make given a board decision. The minimax() function, specifically, returns the "best" move with it's associated color for the specified player, along with the scores of all possible moves to be made in the given board position.
