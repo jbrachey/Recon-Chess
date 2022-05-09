@@ -3,6 +3,7 @@ import math
 import chess
 import random
 from normal_chess_engine_files import chess_engine
+#import chess_engine
 from collections import defaultdict
 import value_of_pieces
 
@@ -78,7 +79,12 @@ class MCTSNode():
             if self.agent_turn:
                 new_board.push(self.agent_move(new_board))
             else:
-                new_board.push(self.opponent_move(new_board))
+                move = self.opponent_move(new_board)
+                try:
+                    new_board.push(move)
+                except AttributeError:
+                    print('MOVE DIDNT WORK IN ROLLOUT: ', move)
+                    new_board.turn = not new_board.turn
             self.agent_turn = not self.agent_turn
         if new_board.is_stalemate():
             return 0
@@ -110,7 +116,7 @@ class MCTSNode():
     """
 
     def value_of_board(self, board):
-        print("val: ", chess_engine.evaluation(board))
+        #print("val: ", chess_engine.evaluation(board))
         val = chess_engine.evaluation(board)
         if self.black:
             val = -val
@@ -118,12 +124,14 @@ class MCTSNode():
 
     def opponent_move(self, board):
         if not self.is_terminal(board):
-            move, val, table = chess_engine.minimax(board=board, depth=2, isMaximizing= self.black)
+            move, val, table = chess_engine.minimax(board=board, depth=1, isMaximizing= self.black)
             #move = random.choice(list(board.legal_moves))
         return move
     def agent_move(self, board):
         if not self.is_terminal(board):
-            move, val, table = chess_engine.minimax(board=board, depth=2, isMaximizing= not self.black)
+            move, val, table = chess_engine.minimax(board=board, depth=1, isMaximizing= not self.black)
+            #print('table in mcts: ', table)
+            #print(table)
             #move = random.choice(list(board.legal_moves))
         return move
 
@@ -137,17 +145,17 @@ class MCTSNode():
 
                 curr_node = curr_node.best_UCTS()
             else:
-                if curr_node == None:
-                    print("self: ", self.state)
-                    print(self.is_terminal(self.state))
+                #if curr_node == None:
+                    #print("self: ", self.state)
+                    #print(self.is_terminal(self.state))
                 return curr_node
         return curr_node
 
     def best_action(self):
         for i in range(self.NUM_ITERATIONS):
             node = self.tree_policy()
-            if node == None:
-                print("self node: ", self.state)
+            #if node == None:
+                #print("self node: ", self.state)
             reward = node.rollout()
             node.backpropagate(reward)
             node.node_expansion()
@@ -167,17 +175,17 @@ class TestMCTS:
         black_move = False
         agent_turn = False
         while not board.is_stalemate() and not board.is_checkmate():
-            print("pre-board")
-            print(board)
+            #print("pre-board")
+            #print(board)
             mcts = MCTSNode(state=board, black=black_move, agent_turn=agent_turn)
             #might want best action to return the value of the move too
             move = mcts.best_action()
             board.push(move)
-            print("post-board")
-            print(board)
+            #print("post-board")
+            #print(board)
             black_move = not black_move
             agent_turn = not agent_turn
 
 
-test = TestMCTS()
-test.main()
+#test = TestMCTS()
+#test.main()

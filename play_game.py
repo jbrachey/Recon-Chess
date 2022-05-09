@@ -10,6 +10,7 @@ Source:         Adapted from recon-chess (https://pypi.org/project/reconchess/)
 """
 
 import argparse
+#import parser
 import random
 import chess
 from player import load_player
@@ -198,15 +199,15 @@ def format_write_board(out, board):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Allows you to play against a bot. Useful for testing and debugging.')
-    parser.add_argument('first_path', help='Path to first bot source file.')
-    parser.add_argument('second_path', help='Path to second bot source file.')
-    # parser.add_argument('--color', default='random', choices=['white', 'black', 'random'],
-    #                    help='The color you want to play as.')
+    parser.add_argument('my_agent.py', help='Path to first bot source file.')
+    parser.add_argument('random_agent.py', help='Path to second bot source file.')
+    parser.add_argument('--color', default='random', choices=['white', 'black', 'random'],
+                        help='The color you want to play as.')
     args = parser.parse_args()
 
-    name_one, constructor_one = load_player(args.first_path)
+    name_one, constructor_one = load_player("my_agent.py")#args.first_path)
     player_one = constructor_one()
-    name_two, constructor_two = load_player(args.second_path)
+    name_two, constructor_two = load_player("random_agent.py")#args.second_path)
     player_two = constructor_two()
 
     players = [player_one, player_two]

@@ -1,0 +1,384 @@
+Starting Game between MyAgent-WHITE and Random-BLACK
+##################################--WHITE's Turn [1]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Sense Around Square b2
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('b1c3'), 40.0, {0: (Move.from_uci('b1c3'), 40.0), 1: (Move.from_uci('d2d4'), 40.0), 2: (Move.from_uci('d2d4'), 40.0), 3: (Move.from_uci('d2d3'), 30.0), 4: (Move.from_uci('d2d3'), 30.0), 5: (Move.from_uci('g1f3'), 15.0), 6: (Move.from_uci('b1a3'), 0.0), 7: (Move.from_uci('c2c4'), 0.0), 8: (Move.from_uci('c2c4'), 0.0), 9: (Move.from_uci('c2c4'), 0.0), 10: (Move.from_uci('c2c4'), 0.0), 11: (Move.from_uci('a2a4'), -5.0), 12: (Move.from_uci('a2a4'), -5.0), 13: (Move.from_uci('a2a4'), -5.0), 14: (Move.from_uci('b2b4'), -10.0), 15: (Move.from_uci('b2b4'), -10.0), 16: (Move.from_uci('b2b4'), -10.0), 17: (Move.from_uci('b2b4'), -10.0), 18: (Move.from_uci('f2f3'), -20.0), 19: (Move.from_uci('f2f3'), -20.0)}) -- Move taken: None
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Truth Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--BLACK's Turn [2]
+##################################--Current Board State 
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Sense Around Square h3
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   | P | P |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Move requested: g7f6 -- Move taken: None
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Truth Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--WHITE's Turn [3]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Sense Around Square b6
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7| p | p | p |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('h3f4'), 36.25, {0: (Move.from_uci('b1c3'), -82.0), 1: (Move.from_uci('d2d4'), -97.0), 2: (Move.from_uci('d2d4'), -97.0), 3: (Move.from_uci('d2d3'), -107.0), 4: (Move.from_uci('d2d3'), -107.0), 5: (Move.from_uci('h3f4'), 36.25), 6: (Move.from_uci('b1a3'), -127.0), 7: (Move.from_uci('c2c4'), -137.0), 8: (Move.from_uci('c2c4'), -137.0), 9: (Move.from_uci('c2c4'), -137.0), 10: (Move.from_uci('c2c4'), -137.0), 11: (Move.from_uci('c2c4'), -137.0), 12: (Move.from_uci('a2a4'), -142.0), 13: (Move.from_uci('b2b4'), -147.0), 14: (Move.from_uci('b2b4'), -147.0), 15: (Move.from_uci('b2b4'), -147.0), 16: (Move.from_uci('b2b4'), -147.0), 17: (Move.from_uci('h1g1'), -148.0), 18: (Move.from_uci('f2f3'), -157.0), 19: (Move.from_uci('f2f3'), -157.0)}) -- Move taken: None
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Truth Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--BLACK's Turn [4]
+##################################--Current Board State 
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Sense Around Square a3
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Move requested: f7f5 -- Move taken: f7f5
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p |   | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Truth Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p |   | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--WHITE's Turn [5]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Sense Around Square d7
+   A   B   C   D   E   F   G   H  
+8|   |   | b | q | k |   |   |   |
+7|   |   | p | p | p |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('b1c3'), 143.25, {0: (Move.from_uci('g5f7'), -25.0), 1: (Move.from_uci('g5h7'), -255.0), 2: (Move.from_uci('g5e6'), -387.0), 3: (Move.from_uci('b1c3'), 143.25), 4: (Move.from_uci('d2d4'), 128.25), 5: (Move.from_uci('d2d4'), 128.25), 6: (Move.from_uci('d2d3'), 118.25), 7: (Move.from_uci('d2d3'), 118.25), 8: (Move.from_uci('d2d3'), 118.25), 9: (Move.from_uci('g5f3'), -21.25), 10: (Move.from_uci('b1a3'), 98.25), 11: (Move.from_uci('c2c4'), 88.25), 12: (Move.from_uci('c2c4'), 88.25), 13: (Move.from_uci('c2c4'), 88.25), 14: (Move.from_uci('c2c4'), 88.25), 15: (Move.from_uci('a2a4'), 83.25), 16: (Move.from_uci('a2a4'), 83.25), 17: (Move.from_uci('a2a4'), 83.25), 18: (Move.from_uci('b2b4'), 78.25), 19: (Move.from_uci('b2b4'), 78.25), 20: (Move.from_uci('b2b4'), 78.25), 21: (Move.from_uci('b2b4'), 78.25), 22: (Move.from_uci('h1g1'), 77.25), 23: (Move.from_uci('f2f3'), 68.25), 24: (Move.from_uci('f2f3'), 68.25)}) -- Move taken: None
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Truth Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p |   | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--BLACK's Turn [6]
+##################################--Current Board State 
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p |   | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Sense Around Square f5
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p |   | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Move requested: c7d6 -- Move taken: None
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p |   | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Truth Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p |   | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--WHITE's Turn [7]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Sense Around Square b6
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7| p | p | p |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('b1c3'), 650.5, {0: (Move.from_uci('h7f8'), 32.0), 1: (Move.from_uci('h7f6'), -244.0), 2: (Move.from_uci('b1c3'), 650.5), 3: (Move.from_uci('d2d4'), 635.5), 4: (Move.from_uci('d2d4'), 635.5), 5: (Move.from_uci('d2d3'), 625.5), 6: (Move.from_uci('d2d3'), 625.5), 7: (Move.from_uci('b1a3'), 605.5), 8: (Move.from_uci('c2c4'), 595.5), 9: (Move.from_uci('c2c4'), 595.5), 10: (Move.from_uci('c2c4'), 595.5), 11: (Move.from_uci('a2a4'), 590.5), 12: (Move.from_uci('a2a4'), 590.5), 13: (Move.from_uci('a2a4'), 590.5), 14: (Move.from_uci('a2a4'), 590.5), 15: (Move.from_uci('b2b4'), 585.5), 16: (Move.from_uci('b2b4'), 585.5), 17: (Move.from_uci('b2b4'), 585.5), 18: (Move.from_uci('b2b4'), 585.5), 19: (Move.from_uci('h1g1'), 584.5), 20: (Move.from_uci('f2f3'), 575.5), 21: (Move.from_uci('f2f3'), 575.5)}) -- Move taken: None
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Truth Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p |   | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--BLACK's Turn [8]
+##################################--Current Board State 
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p |   | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Sense Around Square g6
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p |   | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Move requested: b7b6 -- Move taken: b7b6
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p |   | p | p | p |   | p | p |
+6|   | p |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2|   |   |   |   |   |   |   |   |
+1|   |   |   |   |   |   |   |   |
+
+##################################--Truth Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p |   | p | p | p |   | p | p |
+6|   | p |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--WHITE's Turn [9]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   |   |   |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Sense Around Square f6
+   A   B   C   D   E   F   G   H  
+8|   |   |   |   |   |   |   |   |
+7|   |   |   |   | p |   | p |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   | p |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+

@@ -1,0 +1,463 @@
+Starting Game between MyAgent-WHITE and Random-BLACK
+##################################--WHITE's Turn [1]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: g1f3 -- Move taken: g1f3
+
+##################################--BLACK's Turn [2]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   | N |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B |   | R |
+
+##################################--Move requested: h7h6 -- Move taken: h7h6
+
+##################################--WHITE's Turn [3]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   |   |   |   |   |   | p |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   | N |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B |   | R |
+
+##################################--Move requested: b1c3 -- Move taken: b1c3
+
+##################################--BLACK's Turn [4]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   |   |   |   |   |   | p |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   | N |   |   | N |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R |   | B | Q | K | B |   | R |
+
+##################################--Move requested: g7f6 -- Move taken: None
+
+##################################--WHITE's Turn [5]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   |   |   |   |   |   | p |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   | N |   |   | N |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R |   | B | Q | K | B |   | R |
+
+##################################--Move requested: d2d3 -- Move taken: d2d3
+
+##################################--BLACK's Turn [6]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   |   |   |   |   |   | p |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   | P | P | P | P |
+1| R |   | B | Q | K | B |   | R |
+
+##################################--Move requested: a7b6 -- Move taken: None
+
+##################################--WHITE's Turn [7]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   |   |   |   |   |   | p |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   | P | P | P | P |
+1| R |   | B | Q | K | B |   | R |
+
+##################################--Move requested: c1g5 -- Move taken: c1g5
+
+##################################--BLACK's Turn [8]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   |   |   |   |   |   | p |
+5|   |   |   |   |   |   | B |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   | P | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: b8c6 -- Move taken: b8c6
+
+##################################--WHITE's Turn [9]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   | n |   |   |   |   | p |
+5|   |   |   |   |   |   | B |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   | P | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: e2e4 -- Move taken: e2e4
+
+##################################--BLACK's Turn [10]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   | n |   |   |   |   | p |
+5|   |   |   |   |   |   | B |   |
+4|   |   |   |   | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: c7b6 -- Move taken: None
+
+##################################--WHITE's Turn [11]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   | n |   |   |   |   | p |
+5|   |   |   |   |   |   | B |   |
+4|   |   |   |   | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: g5h6 -- Move taken: g5h6
+
+##################################--BLACK's Turn [12]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   | n |   |   |   |   | B |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: c7d6 -- Move taken: None
+
+##################################--WHITE's Turn [13]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p |   |
+6|   |   | n |   |   |   |   | B |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: h6g7 -- Move taken: h6g7
+
+##################################--BLACK's Turn [14]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | r |
+7| p | p | p | p | p | p | B |   |
+6|   |   | n |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: c6d4 -- Move taken: c6d4
+
+##################################--WHITE's Turn [15]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | r |
+7| p | p | p | p | p | p | B |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | n | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: g7h8 -- Move taken: g7h8
+
+##################################--BLACK's Turn [16]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | B |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | n | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: c7b6 -- Move taken: None
+
+##################################--WHITE's Turn [17]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | B |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | n | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: d3c4 -- Move taken: None
+
+##################################--BLACK's Turn [18]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | B |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | n | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: a7b6 -- Move taken: None
+
+##################################--WHITE's Turn [19]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n | B |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | n | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: h8g7 -- Move taken: h8g7
+
+##################################--BLACK's Turn [20]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n |   |
+7| p | p | p | p | p | p | B |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | n | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: d7c6 -- Move taken: None
+
+##################################--WHITE's Turn [21]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | b | n |   |
+7| p | p | p | p | p | p | B |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | n | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: g7f8 -- Move taken: g7f8
+
+##################################--BLACK's Turn [22]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | B | n |   |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | n | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: b7a6 -- Move taken: None
+
+##################################--WHITE's Turn [23]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | B | n |   |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | n | P |   |   |   |
+3|   |   | N | P |   | N |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: f3d4 -- Move taken: f3d4
+
+##################################--BLACK's Turn [24]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k | B | n |   |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | N | P |   |   |   |
+3|   |   | N | P |   |   |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: a8b8 -- Move taken: a8b8
+
+##################################--WHITE's Turn [25]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   | r | b | q | k | B | n |   |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | N | P |   |   |   |
+3|   |   | N | P |   |   |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   | Q | K | B |   | R |
+
+##################################--Move requested: d1g4 -- Move taken: d1g4
+
+##################################--BLACK's Turn [26]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   | r | b | q | k | B | n |   |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | N | P |   | Q |   |
+3|   |   | N | P |   |   |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   |   | K | B |   | R |
+
+##################################--Move requested: e8f8 -- Move taken: e8f8
+
+##################################--WHITE's Turn [27]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   | r | b | q |   | k | n |   |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | N | P |   | Q |   |
+3|   |   | N | P |   |   |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   |   | K | B |   | R |
+
+##################################--Move requested: f2e3 -- Move taken: None
+
+##################################--BLACK's Turn [28]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   | r | b | q |   | k | n |   |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | N | P |   | Q |   |
+3|   |   | N | P |   |   |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   |   | K | B |   | R |
+
+##################################--Move requested: f8e8 -- Move taken: f8e8
+
+##################################--WHITE's Turn [29]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   | r | b | q | k |   | n |   |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   | N | P |   | Q |   |
+3|   |   | N | P |   |   |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   |   | K | B |   | R |
+
+##################################--Move requested: d4e6 -- Move taken: d4e6
+
+##################################--BLACK's Turn [30]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   | r | b | q | k |   | n |   |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   | N |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   | P |   | Q |   |
+3|   |   | N | P |   |   |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   |   | K | B |   | R |
+
+##################################--Move requested: e7d6 -- Move taken: None
+
+##################################--WHITE's Turn [31]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   | r | b | q | k |   | n |   |
+7| p | p | p | p | p | p |   |   |
+6|   |   |   |   | N |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   | P |   | Q |   |
+3|   |   | N | P |   |   |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   |   | K | B |   | R |
+
+##################################--Move requested: e6g7 -- Move taken: e6g7
+
+##################################--BLACK's Turn [32]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   | r | b | q | k |   | n |   |
+7| p | p | p | p | p | p | N |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   | P |   | Q |   |
+3|   |   | N | P |   |   |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   |   | K | B |   | R |
+
+##################################--Move requested: a7a6 -- Move taken: a7a6
+
+##################################--WHITE's Turn [33]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8|   | r | b | q | k |   | n |   |
+7|   | p | p | p | p | p | N |   |
+6| p |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   | P |   | Q |   |
+3|   |   | N | P |   |   |   |   |
+2| P | P | P |   |   | P | P | P |
+1| R |   |   |   | K | B |   | R |
+
+##################################--Move requested: g7e8 -- Move taken: g7e8
+

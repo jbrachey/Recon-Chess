@@ -14,6 +14,7 @@ import chess
 from player import Player
 from ParticleFilter import ParticleFilter
 import mcts
+from normal_chess_engine_files import chess_engine
 
 
 # TODO: Rename this class to what you would like your bot to be named during the game.
@@ -24,6 +25,7 @@ class MyAgent(Player):
         self.particle_filter = ParticleFilter()
         self.board = None
         self.white = None
+        self.isFirstMove = True
 
     def handle_game_start(self, color, board):
         """
@@ -44,6 +46,11 @@ class MyAgent(Player):
         :param captured_piece: bool - true if your opponents captured your piece with their last move
         :param captured_square: chess.Square - position where your piece was captured
         """
+        if self.white and self.isFirstMove:
+            self.isFirstMove = False
+            return
+        elif self.isFirstMove:
+            self.isFirstMove = False
         if captured_piece:
             self.particle_filter.update_for_piece_captured(captured_square)
         else:
@@ -63,9 +70,35 @@ class MyAgent(Player):
         # TODO: update this method
         #ideas we could minimize entropy. Take our possible board states and
         #we can use possible_moves to decrease our possible boards
+        board_states = self.particle_filter.get_most_probable_board_states()
+        probability = 0
+        differences = {}
+        max_square = None
+        for square in possible_sense:
+            differences[square] = set()
+            for board in board_states:
+                #arbitrary constant to say we have sampled enough boards
+                #goal is to minimize entropy aka eliminate as many board possibilities as possible
+                if probability > 500:
+                    break
+                probability += board[1]
+                if board[0].piece_at(square) not in differences[square]:
+                    differences[square].add(board[0].piece_at(square))
+        best_square = (None, -1)
+        for key in differences.keys():
+            if best_square[1] < len(differences[key]):
+                best_square = (key, len(differences[key]))
 
-
-        return random.choice(possible_sense)
+        best = best_square[0]
+        if best < 8:
+            best += 8
+        if best >= 56:
+            best -= 8
+        if best % 8 == 0:
+            best += 1
+        if best % 7 == 0:
+            best -= 1
+        return best
 
     def handle_sense_result(self, sense_result):
         """
@@ -100,10 +133,20 @@ class MyAgent(Player):
         """
         # TODO: update this method
         #update this so we are sampling more states and taking the weighted best move
-        guess_state = self.sample_states()
-        monte_carlo_tree_search = mcts.MCTSNode(state=guess_state, black= not guess_state.turn, agent_turn=guess_state.turn == self.white)
+        #guess_state = self.sample_states()[0]
+        guess_state = self.particle_filter.get_most_probable_board_states()[0][0]
+        print('guess_state: ')
+        print(guess_state)
+        #move, val, table = chess_engine.minimax(board=guess_state, depth=2, isMaximizing=self.white)
+        #print('table: ', table)
+        #print('move: ', move)
+        #print('val: ', val)
+        #print('table: ', table)
+
+        monte_carlo_tree_search = mcts.MCTSNode(state=guess_state, black=(not guess_state.turn), agent_turn=guess_state.turn == self.white)
 
         move = monte_carlo_tree_search.best_action()
+        print("best move picked! ", move)
         return move
 
     def sample_states(self):
@@ -113,7 +156,7 @@ class MyAgent(Player):
         for state in states:
             boards.append(state[0])
             weights.append(state[1])
-        return random.choice(boards, weights=weights, k=1)
+        return random.choices(boards, weights=weights, k=1)
 
     def handle_move_result(self, requested_move, taken_move, reason, captured_piece, captured_square):
         """
@@ -130,6 +173,8 @@ class MyAgent(Player):
         if requested_move == taken_move:
             self.particle_filter.update_for_requested_move(taken_move, captured_piece)
         else:
+            print('unrequested move taken: ', taken_move)
+            print('reason for unrequested: ', reason)
             self.particle_filter.update_for_unrequested_move(requested_move, taken_move, captured_piece, captured_square)
 
     def handle_game_end(self, winner_color, win_reason):  # possible GameHistory object...
@@ -143,46 +188,3 @@ class MyAgent(Player):
 
 
         pass
-
-    def create_initial_particle_filter(self, numParticles, board):
-        particles = []
-        weight = 1 / numParticles
-        for _ in range(numParticles):
-            particle = (board, weight)
-            particles.append(particle)
-        return particles
-
-    def reweight(self, particleFilter):
-        newParticleFilter = []
-        totalWeight = 0
-        for particle in particleFilter:
-            totalWeight += particle[1]
-        for particle in particleFilter:
-            newParticle = (particle[0], particle[1] / totalWeight)
-            newParticleFilter.append(newParticle)
-        return newParticleFilter
-
-    def sample_new_particles(self, particleFilter):
-        newParticleFilter = []
-        particles = []
-        probabilities = []
-        for particle in particleFilter:
-            particles.append(particle[0])
-            probabilities.append(particle[1])
-        newParticles = random.choices(particles, weights=probabilities, k=self.numParticles)
-        for particle in newParticles:
-            weightedParticle = (particle, 1 / self.numParticles)
-            newParticleFilter.append(weightedParticle)
-        return newParticleFilter
-
-    def board_agrees_with_sense_result(self, board, sense_result):
-        for square in sense_result:
-            pieceOnBoard = board.piece_at(chess.parse_square(square[0]))
-            if square[1] is None and pieceOnBoard is None:
-                continue
-            if (square[1] is None and pieceOnBoard is not None) or (square[1] is not None and pieceOnBoard is None):
-                return False
-            if pieceOnBoard.color != square[1].color or pieceOnBoard.piece_type != square[1].piece_type:
-                return False
-        return True
-

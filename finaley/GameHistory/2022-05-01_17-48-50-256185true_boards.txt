@@ -1,0 +1,377 @@
+Starting Game between MyAgent-WHITE and Random-BLACK
+##################################--WHITE's Turn [1]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('b1c3'), 40.0, {0: (Move.from_uci('b1c3'), 40.0), 1: (Move.from_uci('d2d4'), 40.0), 2: (Move.from_uci('d2d4'), 40.0), 3: (Move.from_uci('d2d3'), 30.0), 4: (Move.from_uci('d2d3'), 30.0), 5: (Move.from_uci('g1f3'), 15.0), 6: (Move.from_uci('b1a3'), 0.0), 7: (Move.from_uci('c2c4'), 0.0), 8: (Move.from_uci('c2c4'), 0.0), 9: (Move.from_uci('c2c4'), 0.0), 10: (Move.from_uci('c2c4'), 0.0), 11: (Move.from_uci('a2a4'), -5.0), 12: (Move.from_uci('a2a4'), -5.0), 13: (Move.from_uci('a2a4'), -5.0), 14: (Move.from_uci('b2b4'), -10.0), 15: (Move.from_uci('b2b4'), -10.0), 16: (Move.from_uci('b2b4'), -10.0), 17: (Move.from_uci('b2b4'), -10.0), 18: (Move.from_uci('f2f3'), -20.0), 19: (Move.from_uci('f2f3'), -20.0)}) -- Move taken: None
+
+##################################--BLACK's Turn [2]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: f7e6 -- Move taken: None
+
+##################################--WHITE's Turn [3]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('d2d4'), 87.0, {0: (Move.from_uci('b1c3'), 45.0), 1: (Move.from_uci('d2d4'), 87.0), 2: (Move.from_uci('d2d4'), 87.0), 3: (Move.from_uci('d2d3'), 77.0), 4: (Move.from_uci('d2d3'), 77.0), 5: (Move.from_uci('h3f4'), 31.25), 6: (Move.from_uci('b1a3'), 5.0), 7: (Move.from_uci('c2c4'), 5.0), 8: (Move.from_uci('c2c4'), 5.0), 9: (Move.from_uci('c2c4'), 5.0), 10: (Move.from_uci('c2c4'), 5.0), 11: (Move.from_uci('c2c4'), 5.0), 12: (Move.from_uci('a2a4'), 0.0), 13: (Move.from_uci('b2b4'), -5.0), 14: (Move.from_uci('b2b4'), -5.0), 15: (Move.from_uci('b2b4'), -5.0), 16: (Move.from_uci('b2b4'), -5.0), 17: (Move.from_uci('h1g1'), -6.0), 18: (Move.from_uci('f2f3'), -15.0), 19: (Move.from_uci('f2f3'), -15.0)}) -- Move taken: None
+
+##################################--BLACK's Turn [4]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p | p | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: g7g6 -- Move taken: g7g6
+
+##################################--WHITE's Turn [5]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p |   | p |
+6|   |   |   |   |   |   | p |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('b1c3'), 143.25, {0: (Move.from_uci('g5f7'), -25.0), 1: (Move.from_uci('g5h7'), -255.0), 2: (Move.from_uci('g5e6'), -387.0), 3: (Move.from_uci('b1c3'), 143.25), 4: (Move.from_uci('d2d4'), 128.25), 5: (Move.from_uci('d2d4'), 128.25), 6: (Move.from_uci('d2d3'), 118.25), 7: (Move.from_uci('d2d3'), 118.25), 8: (Move.from_uci('d2d3'), 118.25), 9: (Move.from_uci('g5f3'), -21.25), 10: (Move.from_uci('b1a3'), 98.25), 11: (Move.from_uci('c2c4'), 88.25), 12: (Move.from_uci('c2c4'), 88.25), 13: (Move.from_uci('c2c4'), 88.25), 14: (Move.from_uci('c2c4'), 88.25), 15: (Move.from_uci('a2a4'), 83.25), 16: (Move.from_uci('a2a4'), 83.25), 17: (Move.from_uci('a2a4'), 83.25), 18: (Move.from_uci('b2b4'), 78.25), 19: (Move.from_uci('b2b4'), 78.25), 20: (Move.from_uci('b2b4'), 78.25), 21: (Move.from_uci('b2b4'), 78.25), 22: (Move.from_uci('h1g1'), 77.25), 23: (Move.from_uci('f2f3'), 68.25), 24: (Move.from_uci('f2f3'), 68.25)}) -- Move taken: None
+
+##################################--BLACK's Turn [6]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p | p | p |   | p |
+6|   |   |   |   |   |   | p |   |
+5|   |   |   |   |   |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: e7e5 -- Move taken: e7e5
+
+##################################--WHITE's Turn [7]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p |   | p |   | p |
+6|   |   |   |   |   |   | p |   |
+5|   |   |   |   | p |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('h7f8'), 348.0, {0: (Move.from_uci('h7f8'), 348.0), 1: (Move.from_uci('h7f6'), -265.0), 2: (Move.from_uci('b1c3'), -237.0), 3: (Move.from_uci('d2d4'), -237.0), 4: (Move.from_uci('d2d4'), -237.0), 5: (Move.from_uci('d2d3'), -247.0), 6: (Move.from_uci('d2d3'), -247.0), 7: (Move.from_uci('b1a3'), -277.0), 8: (Move.from_uci('c2c4'), -277.0), 9: (Move.from_uci('c2c4'), -277.0), 10: (Move.from_uci('c2c4'), -277.0), 11: (Move.from_uci('a2a4'), -282.0), 12: (Move.from_uci('a2a4'), -282.0), 13: (Move.from_uci('a2a4'), -282.0), 14: (Move.from_uci('b2b4'), -287.0), 15: (Move.from_uci('b2b4'), -287.0), 16: (Move.from_uci('b2b4'), -287.0), 17: (Move.from_uci('b2b4'), -287.0), 18: (Move.from_uci('h1g1'), -288.0), 19: (Move.from_uci('f2f3'), -297.0), 20: (Move.from_uci('f2f3'), -297.0)}) -- Move taken: None
+
+##################################--BLACK's Turn [8]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p |   | p |   | p |
+6|   |   |   |   |   |   | p |   |
+5|   |   |   |   | p |   |   |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: g6g5 -- Move taken: g6g5
+
+##################################--WHITE's Turn [9]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p |   | p |   | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   | p |   | p |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('f8g6'), 737.5, {0: (Move.from_uci('b1c3'), 92.0), 1: (Move.from_uci('d2d4'), 134.0), 2: (Move.from_uci('d2d4'), 134.0), 3: (Move.from_uci('d2d3'), 124.0), 4: (Move.from_uci('d2d3'), 124.0), 5: (Move.from_uci('b1a3'), 52.0), 6: (Move.from_uci('c2c4'), 52.0), 7: (Move.from_uci('c2c4'), 52.0), 8: (Move.from_uci('c2c4'), 52.0), 9: (Move.from_uci('a2a4'), 47.0), 10: (Move.from_uci('a2a4'), 47.0), 11: (Move.from_uci('a2a4'), 47.0), 12: (Move.from_uci('b2b4'), 42.0), 13: (Move.from_uci('b2b4'), 42.0), 14: (Move.from_uci('b2b4'), 42.0), 15: (Move.from_uci('b2b4'), 42.0), 16: (Move.from_uci('h1g1'), 41.0), 17: (Move.from_uci('f2f3'), 32.0), 18: (Move.from_uci('f2f3'), 32.0), 19: (Move.from_uci('f8d7'), 97.0), 20: (Move.from_uci('f8e6'), 55.0), 21: (Move.from_uci('f8g6'), 737.5), 22: (Move.from_uci('f8g6'), 737.5)}) -- Move taken: None
+
+##################################--BLACK's Turn [10]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p |   | p |   | p |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   | p |   | p |   |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: h7h5 -- Move taken: h7h5
+
+##################################--WHITE's Turn [11]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p |   | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('d2d4'), -163.0, {0: (Move.from_uci('h7f8'), -278.0), 1: (Move.from_uci('h7g5'), -204.0), 2: (Move.from_uci('h7f6'), -326.0), 3: (Move.from_uci('b1c3'), -215.0), 4: (Move.from_uci('d2d4'), -163.0), 5: (Move.from_uci('d2d4'), -163.0), 6: (Move.from_uci('d2d3'), -183.0), 7: (Move.from_uci('d2d3'), -183.0), 8: (Move.from_uci('b1a3'), -255.0), 9: (Move.from_uci('c2c4'), -255.0), 10: (Move.from_uci('c2c4'), -255.0), 11: (Move.from_uci('c2c4'), -255.0), 12: (Move.from_uci('a2a4'), -260.0), 13: (Move.from_uci('a2a4'), -260.0), 14: (Move.from_uci('a2a4'), -260.0), 15: (Move.from_uci('b2b4'), -265.0), 16: (Move.from_uci('b2b4'), -265.0), 17: (Move.from_uci('b2b4'), -265.0), 18: (Move.from_uci('b2b4'), -265.0), 19: (Move.from_uci('h1g1'), -266.0), 20: (Move.from_uci('f2f3'), -275.0), 21: (Move.from_uci('f2f3'), -275.0)}) -- Move taken: None
+
+##################################--BLACK's Turn [12]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b | n | r |
+7| p | p | p | p |   | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: g8e7 -- Move taken: g8e7
+
+##################################--WHITE's Turn [13]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b |   | r |
+7| p | p | p | p | n | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('f8h7'), 931.5, {0: (Move.from_uci('b1c3'), 672.0), 1: (Move.from_uci('d2d4'), 766.5), 2: (Move.from_uci('d2d4'), 766.5), 3: (Move.from_uci('d2d3'), 756.5), 4: (Move.from_uci('d2d3'), 756.5), 5: (Move.from_uci('f8e6'), 567.0), 6: (Move.from_uci('b1a3'), 632.0), 7: (Move.from_uci('f8d7'), 609.0), 8: (Move.from_uci('c2c4'), 632.0), 9: (Move.from_uci('c2c4'), 632.0), 10: (Move.from_uci('c2c4'), 632.0), 11: (Move.from_uci('c2c4'), 632.0), 12: (Move.from_uci('a2a4'), 627.0), 13: (Move.from_uci('a2a4'), 627.0), 14: (Move.from_uci('a2a4'), 627.0), 15: (Move.from_uci('b2b4'), 622.0), 16: (Move.from_uci('b2b4'), 622.0), 17: (Move.from_uci('b2b4'), 622.0), 18: (Move.from_uci('b2b4'), 622.0), 19: (Move.from_uci('h1g1'), 621.0), 20: (Move.from_uci('f2f3'), 612.0), 21: (Move.from_uci('f2f3'), 612.0), 22: (Move.from_uci('f8h7'), 931.5)}) -- Move taken: None
+
+##################################--BLACK's Turn [14]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b |   | r |
+7| p | p | p | p | n | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: f7e6 -- Move taken: None
+
+##################################--WHITE's Turn [15]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b |   | r |
+7| p | p | p | p | n | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('h7f6'), 827.5, {0: (Move.from_uci('h7f8'), -80.0), 1: (Move.from_uci('h7g5'), 35.0), 2: (Move.from_uci('h7f6'), 827.5), 3: (Move.from_uci('b1c3'), 38.0), 4: (Move.from_uci('d2d4'), 90.0), 5: (Move.from_uci('d2d4'), 90.0), 6: (Move.from_uci('d2d3'), 70.0), 7: (Move.from_uci('d2d3'), 70.0), 8: (Move.from_uci('b1a3'), -2.0), 9: (Move.from_uci('c2c4'), -2.0), 10: (Move.from_uci('c2c4'), -2.0), 11: (Move.from_uci('c2c4'), -2.0), 12: (Move.from_uci('a2a4'), -7.0), 13: (Move.from_uci('a2a4'), -7.0), 14: (Move.from_uci('a2a4'), -7.0), 15: (Move.from_uci('b2b4'), -12.0), 16: (Move.from_uci('b2b4'), -12.0), 17: (Move.from_uci('b2b4'), -12.0), 18: (Move.from_uci('b2b4'), -12.0), 19: (Move.from_uci('h1g1'), -13.0), 20: (Move.from_uci('f2f3'), -22.0), 21: (Move.from_uci('f2f3'), -22.0)}) -- Move taken: None
+
+##################################--BLACK's Turn [16]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b |   | r |
+7| p | p | p | p | n | p |   |   |
+6|   |   |   |   |   |   |   |   |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: d7d6 -- Move taken: d7d6
+
+##################################--WHITE's Turn [17]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b |   | r |
+7| p | p | p |   | n | p |   |   |
+6|   |   |   | p |   |   |   |   |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('b1c3'), 399.0, {0: (Move.from_uci('b1c3'), 399.0), 1: (Move.from_uci('d2d4'), 49.0), 2: (Move.from_uci('d2d4'), 49.0), 3: (Move.from_uci('d2d3'), -13.0), 4: (Move.from_uci('d2d3'), -13.0), 5: (Move.from_uci('b1a3'), -43.0), 6: (Move.from_uci('c2c4'), 344.0), 7: (Move.from_uci('c2c4'), 344.0), 8: (Move.from_uci('c2c4'), 344.0), 9: (Move.from_uci('a2a4'), -48.0), 10: (Move.from_uci('a2a4'), -48.0), 11: (Move.from_uci('a2a4'), -48.0), 12: (Move.from_uci('b2b4'), -53.0), 13: (Move.from_uci('b2b4'), -53.0), 14: (Move.from_uci('b2b4'), -53.0), 15: (Move.from_uci('h1g1'), -54.0), 16: (Move.from_uci('f2f3'), -21.0), 17: (Move.from_uci('f2f3'), -21.0), 18: (Move.from_uci('f8d7'), 2.0), 19: (Move.from_uci('f8e6'), -40.0), 20: (Move.from_uci('f8g6'), 10.0), 21: (Move.from_uci('f8g6'), 10.0)}) -- Move taken: None
+
+##################################--BLACK's Turn [18]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k | b |   | r |
+7| p | p | p |   | n | p |   |   |
+6|   |   |   | p |   |   |   |   |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: f8h6 -- Move taken: f8h6
+
+##################################--WHITE's Turn [19]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k |   |   | r |
+7| p | p | p |   | n | p |   |   |
+6|   |   |   | p |   |   |   | b |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('b1c3'), 320.0, {0: (Move.from_uci('h7f8'), -160.0), 1: (Move.from_uci('h7g5'), -45.0), 2: (Move.from_uci('h7f6'), -112.0), 3: (Move.from_uci('b1c3'), 320.0), 4: (Move.from_uci('d2d4'), 10.0), 5: (Move.from_uci('d2d4'), 10.0), 6: (Move.from_uci('d2d3'), -10.0), 7: (Move.from_uci('d2d3'), -10.0), 8: (Move.from_uci('b1a3'), -82.0), 9: (Move.from_uci('c2c4'), 305.0), 10: (Move.from_uci('c2c4'), 305.0), 11: (Move.from_uci('c2c4'), 305.0), 12: (Move.from_uci('a2a4'), -87.0), 13: (Move.from_uci('a2a4'), -87.0), 14: (Move.from_uci('a2a4'), -87.0), 15: (Move.from_uci('b2b4'), -92.0), 16: (Move.from_uci('b2b4'), -92.0), 17: (Move.from_uci('b2b4'), -92.0), 18: (Move.from_uci('b2b4'), -92.0), 19: (Move.from_uci('h1g1'), -93.0), 20: (Move.from_uci('f2f3'), -102.0), 21: (Move.from_uci('f2f3'), -102.0)}) -- Move taken: None
+
+##################################--BLACK's Turn [20]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r | n | b | q | k |   |   | r |
+7| p | p | p |   | n | p |   |   |
+6|   |   |   | p |   |   |   | b |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: b8d7 -- Move taken: b8d7
+
+##################################--WHITE's Turn [21]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k |   |   | r |
+7| p | p | p | n | n | p |   |   |
+6|   |   |   | p |   |   |   | b |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('d2d4'), 831.0, {0: (Move.from_uci('b1c3'), 779.0), 1: (Move.from_uci('d2d4'), 831.0), 2: (Move.from_uci('d2d4'), 831.0), 3: (Move.from_uci('d2d3'), 811.0), 4: (Move.from_uci('d2d3'), 811.0), 5: (Move.from_uci('b1a3'), 739.0), 6: (Move.from_uci('c2c4'), 739.0), 7: (Move.from_uci('c2c4'), 739.0), 8: (Move.from_uci('c2c4'), 739.0), 9: (Move.from_uci('a2a4'), 734.0), 10: (Move.from_uci('a2a4'), 734.0), 11: (Move.from_uci('a2a4'), 734.0), 12: (Move.from_uci('b2b4'), 729.0), 13: (Move.from_uci('b2b4'), 729.0), 14: (Move.from_uci('b2b4'), 729.0), 15: (Move.from_uci('b2b4'), 729.0), 16: (Move.from_uci('h1g1'), 728.0), 17: (Move.from_uci('f2f3'), 719.0), 18: (Move.from_uci('f2f3'), 719.0), 19: (Move.from_uci('f8e6'), 359.0), 20: (Move.from_uci('f8d7'), 329.0), 21: (Move.from_uci('f8g6'), 384.0), 22: (Move.from_uci('f8g6'), 384.0)}) -- Move taken: None
+
+##################################--BLACK's Turn [22]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k |   |   | r |
+7| p | p | p | n | n | p |   |   |
+6|   |   |   | p |   |   |   | b |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: e7g8 -- Move taken: e7g8
+
+##################################--WHITE's Turn [23]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k |   | n | r |
+7| p | p | p | n |   | p |   |   |
+6|   |   |   | p |   |   |   | b |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('d1h5'), 1925.0, {0: (Move.from_uci('d1h5'), 1925.0), 1: (Move.from_uci('b1c3'), 1117.0), 2: (Move.from_uci('d3d4'), 1106.0), 3: (Move.from_uci('d3d4'), 1106.0), 4: (Move.from_uci('d3d4'), 1106.0), 5: (Move.from_uci('c2c4'), 1062.0), 6: (Move.from_uci('c2c4'), 1062.0), 7: (Move.from_uci('c2c4'), 1062.0), 8: (Move.from_uci('d1e2'), 1080.0), 9: (Move.from_uci('a2a4'), 1057.0), 10: (Move.from_uci('a2a4'), 1057.0), 11: (Move.from_uci('a2a4'), 1057.0), 12: (Move.from_uci('d1g4'), 263.5), 13: (Move.from_uci('d1f3'), 1843.0), 14: (Move.from_uci('b2b4'), 1052.0), 15: (Move.from_uci('b2b4'), 1052.0), 16: (Move.from_uci('b2b4'), 1052.0), 17: (Move.from_uci('b2b4'), 1052.0), 18: (Move.from_uci('h1g1'), 1051.0), 19: (Move.from_uci('f2f3'), 1024.0), 20: (Move.from_uci('f2f3'), 1024.0), 21: (Move.from_uci('f8e6'), 682.0), 22: (Move.from_uci('f8d7'), 692.0), 23: (Move.from_uci('f8g6'), 707.0), 24: (Move.from_uci('f8g6'), 707.0), 25: (Move.from_uci('e1e2'), 989.0)}) -- Move taken: None
+
+##################################--BLACK's Turn [24]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k |   | n | r |
+7| p | p | p | n |   | p |   |   |
+6|   |   |   | p |   |   |   | b |
+5|   |   |   |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: d7c5 -- Move taken: d7c5
+
+##################################--WHITE's Turn [25]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k |   | n | r |
+7| p | p | p |   |   | p |   |   |
+6|   |   |   | p |   |   |   | b |
+5|   |   | n |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: (Move.from_uci('d2d4'), 247.0, {0: (Move.from_uci('b1c3'), -18.0), 1: (Move.from_uci('d2d4'), 247.0), 2: (Move.from_uci('d2d3'), -48.0), 3: (Move.from_uci('d2d3'), -48.0), 4: (Move.from_uci('b1a3'), -140.0), 5: (Move.from_uci('c2c4'), -140.0), 6: (Move.from_uci('c2c4'), -140.0), 7: (Move.from_uci('c2c4'), -140.0), 8: (Move.from_uci('a2a4'), -145.0), 9: (Move.from_uci('a2a4'), -145.0), 10: (Move.from_uci('a2a4'), -145.0), 11: (Move.from_uci('b2b4'), 217.0), 12: (Move.from_uci('b2b4'), 217.0), 13: (Move.from_uci('b2b4'), 217.0), 14: (Move.from_uci('b2b4'), 217.0), 15: (Move.from_uci('h1g1'), -151.0), 16: (Move.from_uci('f2f3'), -78.0), 17: (Move.from_uci('f2f3'), -78.0), 18: (Move.from_uci('f8d7'), -55.0), 19: (Move.from_uci('f8e6'), -137.0), 20: (Move.from_uci('f8g6'), -102.0), 21: (Move.from_uci('f8g6'), -102.0)}) -- Move taken: None
+
+##################################--BLACK's Turn [26]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   | b | q | k |   | n | r |
+7| p | p | p |   |   | p |   |   |
+6|   |   |   | p |   |   |   | b |
+5|   |   | n |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
+##################################--Move requested: c8e6 -- Move taken: c8e6
+
+##################################--WHITE's Turn [27]
+##################################--Current Board State
+   A   B   C   D   E   F   G   H  
+8| r |   |   | q | k |   | n | r |
+7| p | p | p |   |   | p |   |   |
+6|   |   |   | p | b |   |   | b |
+5|   |   | n |   | p |   | p | p |
+4|   |   |   |   |   |   |   |   |
+3|   |   |   |   |   |   |   |   |
+2| P | P | P | P | P | P | P | P |
+1| R | N | B | Q | K | B | N | R |
+
